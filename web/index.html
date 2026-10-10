@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mission Control · SpaceX · Starship · Starlink</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="scene-overview">
+<div id="stars"></div>
+<header id="top">
+  <div class="brand">
+    <div class="logo"><span class="dot"></span>MISSION&nbsp;CONTROL</div>
+    <div class="sub">SpaceX · Starship · Starlink · Boyd wall</div>
+  </div>
+  <div class="clocks">
+    <div class="clock"><span class="lbl">ET</span><span id="clock-et">--:--:--</span></div>
+    <div class="clock"><span class="lbl">UTC</span><span id="clock-utc">--:--:--</span></div>
+    <div class="clock date" id="clock-date"></div>
+  </div>
+  <div class="last" id="last"></div>
+  <div class="pills">
+    <span class="pill" id="mode-pill">LIVE</span>
+    <span class="pill ghost" id="kiosk-pill" title="Press K">KIOSK OFF</span>
+  </div>
+</header>
+
+<main id="wall">
+  <section class="panel" id="p-launch" data-panel="launch">
+    <div class="ph"><span class="tag">NEXT SPACEX LAUNCH</span><span class="rt" id="hero-status"></span></div>
+    <div id="hero"></div>
+    <div class="ph small"><span class="tag">ON DECK</span><span class="rt">all times ET</span></div>
+    <ol id="queue"></ol>
+    <div class="src" id="src-launch"></div>
+  </section>
+
+  <section class="panel globe-panel" id="p-globe" data-panel="globe">
+    <div class="ph"><span class="tag">LAUNCH SITES · ORBIT VIEW</span><span class="rt" id="globe-caption"></span></div>
+    <canvas id="globe"></canvas>
+    <div id="globe-legend"></div>
+    <div class="src" id="src-globe"></div>
+  </section>
+
+  <section class="panel" id="p-right" data-panel="starlink">
+    <div class="ph"><span class="tag">STARLINK CONSTELLATION</span><span class="rt" id="sl-asof"></span></div>
+    <div id="starlink"></div>
+    <div class="src" id="src-starlink"></div>
+    <div class="ph small"><span class="tag">STARSHIP STATUS</span><span class="rt">LL2 dashboard</span></div>
+    <div id="ss-status"></div>
+  </section>
+
+  <section class="panel wide" id="p-starship" data-panel="starship">
+    <div class="ph"><span class="tag">STARSHIP FLIGHT HISTORY</span><span class="rt" id="ss-record"></span></div>
+    <div id="timeline"></div>
+    <div class="src" id="src-starship"></div>
+  </section>
+
+  <section class="panel wide" id="p-journal" data-panel="journal">
+    <div class="ph"><span class="tag">FROM JIM'S JOURNAL</span><span class="rt" id="journal-files"></span></div>
+    <div id="journal"><div id="journal-track"></div></div>
+  </section>
+</main>
+
+<div id="spot" aria-hidden="true"></div>
+<div id="kbar"><span id="kbar-fill"></span><em id="kbar-label"></em></div>
+<footer id="foot"><span id="foot-l"></span><span id="foot-r">keys: 1–7 scenes · K kiosk · R refresh</span></footer>
+
+<!--INLINE-DATA-->
+<script src="land.js"></script>
+<script src="globe.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

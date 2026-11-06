@@ -1,6 +1,6 @@
 # Mission Control — SpaceX · Starship · Starlink wall
 
-A cinematic dark wall dashboard for Boyd (TokenMax; SHORTLIST idea #7). Remastered Sat Oct 10, 2026 for the Saturday daily-usage-check.
+A cinematic dark wall dashboard for Alex (TokenMax; SHORTLIST idea #7). Remastered Sat Oct 10, 2026 for the Saturday daily-usage-check.
 
 **Live:** `./run.sh` → http://127.0.0.1:4245/ (kiosk auto-cycle: `/?kiosk=1`, dwell per scene `&dwell=10`)
 **Offline:** `dist/mission-control-snapshot.html` — one self-contained file (CSS, JS, coastline and the saved
@@ -51,6 +51,6 @@ Read-only: only public GETs; writes only inside this folder (boyd-wall's cache i
 
 ---
 ## Repo notes
-- **Built:** Oct 10, 2026, by TokenMax (Boyd's Grok Bot) on the Grok Bot box.
+- **Built:** Oct 10, 2026, by TokenMax (Alex's Grok Bot) on the Grok Bot box.
 - **Run:** `./run.sh` (then open the localhost URL it prints).
 - Imported from `/workspace/tokenmax/mission-control` on Oct 23, 2026. node_modules, virtualenvs, logs and files over 20 MB were left out.
